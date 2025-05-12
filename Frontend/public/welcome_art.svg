@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 265">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f5f4ff;
+        opacity: .65;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: url(#linear-gradient);
+        stroke-miterlimit: 10;
+        stroke-width: 24px;
+      }
+
+      .cls-2 {
+        fill: #9fbfff;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="200" y1="160.8" x2="200" y2="19.76" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".25" stop-color="#fbfcff"/>
+      <stop offset=".44" stop-color="#f1f6ff"/>
+      <stop offset=".62" stop-color="#e1ebff"/>
+      <stop offset=".79" stop-color="#c9dbff"/>
+      <stop offset=".94" stop-color="#abc7ff"/>
+      <stop offset="1" stop-color="#9fbfff"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <rect class="cls-3" width="400" height="265"/>
+    <path class="cls-1" d="m208,196.24c3.2,16.02,56-32,80-8,24,24,86.39,19.16,72-24-24-72-160-8-152,32Z"/>
+    <path class="cls-1" d="m219.2,214.56s-40.11,55.92-68.15,23.22c-28.05-32.7-65.57,30.79-103.94-32.2-38.37-62.99,161.6-46.61,161.6-46.61l10.49,55.59Z"/>
+    <g>
+      <path class="cls-4" d="m144.69,159.76s-11.06-128,55.31-128,55.31,128,55.31,128"/>
+      <path class="cls-2" d="m271.44,206.13c-40.85-13.67-47.35,12.66-71.31,14.04-23.96,1.38-32.35-22.18-63.84-12.35-31.49,9.83-50.74-29.13-44.13-53.55,6.61-24.42,45.51-44.61,71.31-14.04,25.8,30.57,55.91-3.22,87.39-13.05,31.49-9.83,56.83,12.75,58.21,36.71,1.38,23.96-18.48,48.64-37.63,42.23Z"/>
+    </g>
+  </g>
+</svg>

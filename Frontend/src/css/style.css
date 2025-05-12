@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Inter-SemiBold";
+    src: url("../fonts/Inter-SemiBold.ttf");
+}
+@font-face {
+    font-family: "Inter-Bold";
+    src: url("../fonts/Inter-Bold.ttf");
+}
+@font-face {
+    font-family: "Inter-Medium";
+    src: url("../fonts/Inter-Medium.ttf");
+}
+
+body {
+    padding: calc(15px * 2 + 64px) 15px 15px 15px;
+    font-family: "Inter-Medium", sans-serif;
+    background-color: #f5f8ff;
+}
+
+.semibold {
+    font-family: "Inter-SemiBold", sans-serif;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+header {
+    top: 15px;
+    left: 15px;
+    position: fixed;
+    height: 64px;
+    width: calc(100% - 30px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - (15px * 3 + 64px));
+}
+
+.window {
+    min-height: 100px;
+    min-width: 300px;
+    width: 100%;
+    height: fit-content;
+    max-height: 600px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 30px;
+    filter: drop-shadow(0px 0px 15px rgba(195, 195, 195, 0.38));
+}
+
+.window-geometry {
+    min-height: 100px;
+    min-width: 300px;
+    width: 100%;
+    height: fit-content;
+    max-height: 600px;
+    max-width: 500px;
+}
+
+.header-icon {
+    height: 48px;
+    width: 48px;
+}
+
+.button, input {
+    height: 40px;
+    border: none;
+    background-color: #e4e4e4;
+    padding: 5px 10px 5px 10px;
+    font-size: 15px;
+    transition-duration: 0.3s;
+    color: black;
+    border-radius: 10px;
+}
+input:focus {
+    scale: 1.05
+}
+
+.button:hover, .button:focus {
+    background-color: #c6c6c6;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.icon-button {
+    cursor: pointer;
+    min-height: 32px;
+    min-width: 32px;
+    transition: 0.2s scale;
+}
+.icon-button:hover, .icon-button:focus {
+    scale: 0.85
+}
+
+.form-error {
+    background-color: #ffaa06;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: fit-content;
+}
+.locker-card {
+    width: 400px;
+    flex-grow: 1;
+    height: fit-content;
+    background-color: #e4f1ff;
+    gap: 15px;
+    padding: 20px
+}
+

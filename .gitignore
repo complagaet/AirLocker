@@ -1,0 +1,120 @@
+# === GLOBAL ===
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.orig
+
+# Ignore environment files
+.env
+.env.local
+.env.*.local
+*.env
+
+# === NODE / JS / TS ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# Build output
+dist/
+build/
+.cache/
+.next/
+out/
+.eslintcache
+.vite/
+
+# VSCode settings
+.vscode/
+.idea/
+
+# Coverage reports
+coverage/
+.nyc_output/
+*.lcov
+
+# === PYTHON ===
+__pycache__/
+*.py[cod]
+*.so
+*.pyo
+*.pyd
+*.pyc
+*.egg
+*.egg-info/
+*.eggs/
+*.manifest
+*.spec
+*.sqlite3
+*.db
+*.log
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Python bytecode cache
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.pyre/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# === REACT / VITE ===
+# (already covered by general nodejs and build sections)
+
+# === MONOREPO TOOLS ===
+# TurboRepo
+turbo/
+
+# Nx
+dist/
+tmp/
+.project.json
+
+# Lerna
+lerna-debug.log
+lerna-workspace-version.txt
+
+# Rush
+common/temp/
+common/config/rush/build-cache.json
+
+# === OS / EDITOR SPECIFIC ===
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# === OPTIONAL: Custom shared folders ===
+# shared/dist/
+# shared/build/
+# tools/output/
+
+settings.json
