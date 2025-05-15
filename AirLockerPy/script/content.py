@@ -19,8 +19,9 @@ def getIMG():
     return {
         "Lukoyanov": pygame.image.load('content/Lukoyanov.png'),
         "Email": pygame.image.load('content/Email.png'),
+        "Password": pygame.image.load('content/Password.png'),
         "EDLogoBig": pygame.image.load('content/EDLogoBig.png'),
-        "EDIcoGUI": pygame.image.load('content/EDIcoGUI.png'),
+        "AirLockerIco": pygame.image.load('content/AirLockerIco.png'),
         "Molotok": pygame.image.load('content/Molotok.png'),
         "Back": pygame.image.load('content/Back.png'),
         "Reset": pygame.image.load('content/Reset.png'),
@@ -30,7 +31,10 @@ def getIMG():
         "Entry": pygame.image.load('content/Entry.png'),
         "EntryFocused": pygame.image.load('content/EntryFocused.png'),
         "AITU": pygame.image.load('content/AITU.png'),
-        "HEXIco": pygame.image.load('content/HEXIco.png'),
+        "Locker": pygame.image.load('content/Locker.png'),
+        "NewLocker": pygame.image.load('content/NewLocker.png'),
+        "Locked": pygame.image.load('content/Locked.png'),
+        "Unlocked": pygame.image.load('content/Unlocked.png'),
     }
 
 

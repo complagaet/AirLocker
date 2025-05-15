@@ -234,6 +234,8 @@ while running:
             NOTIFICATIONS.append((IMG["Next"], "You have to log in to continue."))
 
     if LOCATION == "LOGIN":
+        screens.loadscreen()
+
         if LOGIN_LOCATION == "email":
             creds_index = 0
             img = IMG['Email']
@@ -241,7 +243,7 @@ while running:
             subtitle = LANG['Email']
         else:
             creds_index = 1
-            img = IMG['HEXIco']
+            img = IMG['Password']
             title = LANG['EnterPassword']
             subtitle = LANG['Password']
 
@@ -289,7 +291,12 @@ while running:
             response = requests.get(f"{CONFIG.get_settings()["api"]}/locker/{CONFIG.get_settings()["lockerId"]}", headers=headers)
 
             if response.status_code == 200:
-                screens.alert(IMG['EDIcoGUI'], f"{response.json()["lockerName"]}", f"{response.json()["isLocked"]}", "BGFocus")
+                screens.alert(
+                    IMG['Locked'] if response.json()["isLocked"] else IMG['Unlocked'],
+                    f"{response.json()["lockerName"]}",
+                    f"{response.json()["isLocked"]}",
+                    "BGFocus"
+                )
 
             else:
                 print(f'Ошибка: {response.status_code}')
@@ -303,13 +310,15 @@ while running:
             LOCATION = "PORT_SELECTION"
 
     if LOCATION == "LOCKER_SELECTION":
+        screens.loadscreen()
+
         lockers = CONFIG.get_settings()["lockers"]
 
         lockers_gui = []
         for locker in lockers:
-            lockers_gui.append((IMG["Home"], locker["lockerName"]))
+            lockers_gui.append((IMG["Locker"], locker["lockerName"]))
 
-        lockers_gui.append((IMG["Molotok"], "New Locker"))
+        lockers_gui.append((IMG["NewLocker"], "New Locker"))
 
         menu = screens.menu(ev, LANG["SelectLocker"], lockers_gui, [0] * len(lockers_gui), False)
 
@@ -322,6 +331,8 @@ while running:
                 LOCATION = "NEW_LOCKER"
 
     if LOCATION == "NEW_LOCKER":
+        screens.loadscreen()
+
         for event in ev:
             if event.type == pygame.TEXTINPUT:
                 LOCKER_INPUT += f"{event.text}"
@@ -352,11 +363,11 @@ while running:
                 if event.key == 27:
                     LOGIN_LOCATION = "email"
 
-        screens.alert(IMG["Molotok"], "New Locker", f"Locker Name: {LOCKER_INPUT + '_'}", "WHITE")
+        screens.alert(IMG["NewLocker"], "New Locker", f"Locker Name: {LOCKER_INPUT + '_'}", "WHITE")
 
     if LOCATION == "PORT_SELECTION":
         screens.loadscreen()
-        #screens.alert(IMG['EDIcoGUI'], LANG['AL'], f"{LANG['Wait']} -", "BGFocus")
+        #screens.alert(IMG['AirLockerIco'], LANG['AL'], f"{LANG['Wait']} -", "BGFocus")
 
         ports_gui = []
         for i in PORTS:
@@ -387,7 +398,7 @@ while running:
             (IMG["Reset"], "RESET COUNTER"),
             (IMG["Next"], "Start"),
             (IMG["Next"], "Stop"),
-            (IMG["HEXIco"], "Enter number"),
+            (IMG["Next"], "Enter number"),
             (IMG["Reset"], "Return"),
         ], [0, 0, 0, 0, 0, 0], False)
 
