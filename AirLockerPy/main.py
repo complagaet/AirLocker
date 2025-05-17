@@ -281,7 +281,7 @@ while running:
                 if event.key == 27:
                     LOGIN_LOCATION = "email"
 
-        screens.alert(img, title, f"{subtitle}: {LOGIN_CREDS[creds_index] + '_'}", "WHITE")
+        screens.alert(img, title, f"{subtitle}: {LOGIN_CREDS[creds_index] + '_' if LOGIN_LOCATION == "email" else "#" * len(LOGIN_CREDS[creds_index])}", "WHITE")
 
     if LOCATION == "LOCKER":
         if CONFIG.get_settings()["port"]:
@@ -304,7 +304,7 @@ while running:
                 LOCATION = "INIT"
 
             pygame.display.flip()
-            time.sleep(3)
+            #time.sleep(3)
 
         else:
             LOCATION = "PORT_SELECTION"

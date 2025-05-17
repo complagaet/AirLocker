@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.28 25.89">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: url(#linear-gradient);
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-3 {
+        fill: #9fbfff;
+      }
+
+      .cls-4 {
+        fill: #333;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="13.64" y1="18.46" x2="13.64" y2=".84" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".2" stop-color="#aaa" stop-opacity=".42"/>
+      <stop offset=".43" stop-color="#676767" stop-opacity=".74"/>
+      <stop offset=".68" stop-color="#3f3f3f" stop-opacity=".94"/>
+      <stop offset="1" stop-color="#333"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="cls-2" d="M6.73,18.34S5.35,2.34,13.64,2.34s6.91,16,6.91,16"/>
+      <path class="cls-4" d="M22.57,24.13c-5.11-1.71-5.92,1.58-8.91,1.76s-4.04-2.77-7.98-1.54c-3.94,1.23-6.34-3.64-5.52-6.69.83-3.05,5.69-5.58,8.91-1.76,3.23,3.82,6.99-.4,10.92-1.63s7.1,1.59,7.28,4.59c.17,3-2.31,6.08-4.7,5.28Z"/>
+      <g>
+        <path class="cls-3" d="M19.64,14.25c-1.08,0-1.95-.88-1.95-1.95v-2.85h-2.85c-1.08,0-1.95-.88-1.95-1.95s.87-1.95,1.95-1.95h2.85v-2.85c0-1.08.88-1.95,1.95-1.95s1.95.88,1.95,1.95v2.85h2.85c1.08,0,1.95.88,1.95,1.95s-.88,1.95-1.95,1.95h-2.85v2.85c0,1.08-.87,1.95-1.95,1.95Z"/>
+        <path class="cls-1" d="M19.64,1.5c.66,0,1.2.54,1.2,1.2v3.6h3.6c.66,0,1.2.54,1.2,1.2s-.54,1.2-1.2,1.2h-3.6v3.6c0,.66-.54,1.2-1.2,1.2s-1.2-.54-1.2-1.2v-3.6h-3.6c-.66,0-1.2-.54-1.2-1.2s.54-1.2,1.2-1.2h3.6v-3.6c0-.66.54-1.2,1.2-1.2M19.64,0c-1.49,0-2.7,1.21-2.7,2.7v2.1h-2.1c-1.49,0-2.7,1.21-2.7,2.7s1.21,2.7,2.7,2.7h2.1v2.1c0,1.49,1.21,2.7,2.7,2.7s2.7-1.21,2.7-2.7v-2.1h2.1c1.49,0,2.7-1.21,2.7-2.7s-1.21-2.7-2.7-2.7h-2.1v-2.1c0-1.49-1.21-2.7-2.7-2.7h0Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

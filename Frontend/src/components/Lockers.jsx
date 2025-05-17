@@ -40,7 +40,10 @@ function Lockers(props) {
     }, [user])
 
     if (!user?.lockers || user.lockers.length === 0) {
-        return <p>Create AirLocker in Python app!</p>;
+        return <div className="center-container flex-col gap-[10px]">
+            <img className="large-icon" src="/new_airlocker.svg" alt/>
+            <p className="text-center">Create Your First AirLocker in a Python App</p>
+        </div>;
     }
 
     return (

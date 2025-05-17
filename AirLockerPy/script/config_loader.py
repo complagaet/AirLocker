@@ -2,7 +2,7 @@ import json
 import os
 
 DEFAULT_SETTINGS = {
-    "api": "http://localhost:3000/api",
+    "api": "https://airlocker.onrender.com/api",
     "token": "",
     "username": "",
     "email": "",

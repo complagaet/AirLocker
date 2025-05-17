@@ -1,4 +1,4 @@
-import {useAuth} from "../js/AuthContext.jsx";
+import { useAuth } from "../js/AuthContext.jsx";
 import Button from "./Button.jsx";
 
 import { HiOutlineLogout } from "react-icons/hi";

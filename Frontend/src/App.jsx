@@ -4,6 +4,7 @@ import { useAuth } from './js/AuthContext'
 import Header from './components/Header'
 import AuthScreen from './components/AuthScreen'
 import Lockers from './components/Lockers'
+import OverlayLoader from "./components/OverlayLoader.jsx";
 import bobatron from "./js/Bobatron";
 
 import './css/style.css'
@@ -17,7 +18,7 @@ window.addEventListener("resize", () => {
 function App() {
     const [location, setLocation] = useState("Loading");
 
-    const {user, loading, token} = useAuth();
+    const {user, loading, token, overlayLoader, setOverlayLoader} = useAuth();
 
     const ref = useRef(null)
     const changeScreen = useMemo(() => new ChangeScreen(ref, setLocation), []);
@@ -37,6 +38,7 @@ function App() {
 
     return (
         <>
+            <OverlayLoader show={overlayLoader}/>
             <Header />
             <div ref={ref} className={location !== "App" ? "center-container" : ""}>
                 {location === "Loading" && <h1>Loading</h1>}

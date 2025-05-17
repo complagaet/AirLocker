@@ -8,6 +8,7 @@ export function AuthProvider({ children }) {
     const [user, setUser] = useState({})
     const [token, setToken] = useState(null)
     const [loading, setLoading] = useState(true)
+    const [overlayLoader, setOverlayLoader] = useState(false)
 
     const userPollingIntervalId = useRef(null);
 
@@ -70,17 +71,21 @@ export function AuthProvider({ children }) {
     }
 
     const updateLocker = async (id, lockerName, isLocked) => {
+        setOverlayLoader(true)
         await airLocker.updateLocker(id, lockerName, isLocked)
         setUser(airLocker.user)
+        setOverlayLoader(false)
     }
 
     const removeLocker = async (id) => {
+        setOverlayLoader(true)
         await airLocker.removeLocker(id)
         setUser(airLocker.user)
+        setOverlayLoader(false)
     }
 
     return (
-        <AuthContext.Provider value={{ user, token, loading, setLoading, login, getUser, logout, register, updateLocker, removeLocker }}>
+        <AuthContext.Provider value={{ user, token, loading, setLoading, login, getUser, logout, register, updateLocker, removeLocker, overlayLoader, setOverlayLoader }}>
             {children}
         </AuthContext.Provider>
     )
