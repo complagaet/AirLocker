@@ -130,7 +130,11 @@ input:focus {
     height: fit-content;
     background-color: #e4f1ff;
     gap: 15px;
-    padding: 20px
+    padding: 20px;
+    transition: 0.3s background-color;
+}
+.locker-card-unlocked {
+    background-color: #ffe4e4;
 }
 
 .overlay-loader-wrapper {
@@ -166,4 +170,23 @@ input:focus {
 @keyframes l1 {
     33% {border-radius: 0;background: #514b82 ;clip-path: polygon(0 0,100% 0,100% 100%,0 100%)}
     66% {border-radius: 0;background: #ffa516 ;clip-path: polygon(50% 0,50% 0,100% 100%,0 100%)}
+}
+.locker-button-wrapper {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 25px;
+    transition-duration: 0.3s;
+}
+.locker-button-wrapper:hover {
+    scale: 0.85
+}
+.locker-button {
+    width: 80px;
+    height: 80px;
 }

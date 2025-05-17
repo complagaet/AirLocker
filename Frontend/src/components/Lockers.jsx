@@ -3,27 +3,25 @@ import {useAuth} from "../js/AuthContext.jsx";
 import bobatron from "../js/Bobatron.js";
 import {HiLockClosed, HiLockOpen, HiTrash} from "react-icons/hi";
 
+function LockerButton(props) {
+    return <div className="locker-button-wrapper bobatron" onClick={props.onClick}>
+        <img className="locker-button" src={props.isLocked ? "/locked.svg" : "/unlocked.svg"}/>
+        <p>{props.isLocked ? "Locked" : "Unlocked"}</p>
+    </div>
+}
+
 function LockerCard(props) {
     const {updateLocker, removeLocker} = useAuth();
 
     return (
-        <div className="locker-card bobatron">
+        <div className={`locker-card bobatron ${props.locker.isLocked ? "" : "locker-card-unlocked"}`}>
             <div className="flex justify-between gap-[5px]">
                 <h1 className="text-2xl semibold">{props.locker.lockerName}</h1>
                 <HiTrash className="icon-button" onClick={() => {removeLocker(props.locker._id)}}/>
             </div>
             <br></br>
-            <div onClick={() => {updateLocker(props.locker._id, props.locker.lockerName, !props.locker.isLocked)}}>
-                {props.locker.isLocked ?
-                    <div className="flex items-center gap-[5px]">
-                        <HiLockClosed className="icon-button"/>
-                        Locked
-                    </div> :
-                    <div className="flex items-center gap-[5px]">
-                        <HiLockOpen className="icon-button"/>
-                        Unlocked
-                    </div>
-                }
+            <div className="flex justify-center clickable">
+                <LockerButton onClick={() => {updateLocker(props.locker._id, props.locker.lockerName, !props.locker.isLocked)}} isLocked={props.locker.isLocked}/>
             </div>
             <br></br>
             <p style={{color: "#373737"}}>Last update: {new Date(props.locker.updatedAt).toLocaleString("ru-RU")}</p>
@@ -41,7 +39,7 @@ function Lockers(props) {
 
     if (!user?.lockers || user.lockers.length === 0) {
         return <div className="center-container flex-col gap-[10px]">
-            <img className="large-icon" src="/new_airlocker.svg" alt/>
+            <img className="large-icon" src="/new_airlocker.svg" />
             <p className="text-center">Create Your First AirLocker in a Python App</p>
         </div>;
     }

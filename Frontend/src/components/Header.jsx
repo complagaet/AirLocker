@@ -10,11 +10,11 @@ function Header(props) {
 
     return <header>
         <div className="flex items-center" style={{gap: "10px"}}>
-            <img className="header-icon" src="/favicon.svg"/>
+            <img className="header-icon" src="/favicon.svg" />
             <h1 className="text-2xl">AirLocker</h1>
         </div>
         <div className="flex items-center" style={{gap: "10px", transitionDuration: "0.3s"}}>
-            {loading && <h1>LOADING</h1>}
+            {loading && <div style={{width: "30px", height: "30px"}} className="overlay-loader"></div> }
             {u.username}
             {u.email && <HiOutlineLogout className="icon-button" onClick={() => logout()}>logout</HiOutlineLogout>}
         </div>

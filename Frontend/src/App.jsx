@@ -41,7 +41,7 @@ function App() {
             <OverlayLoader show={overlayLoader}/>
             <Header />
             <div ref={ref} className={location !== "App" ? "center-container" : ""}>
-                {location === "Loading" && <h1>Loading</h1>}
+                {location === "Loading" && <div className="overlay-loader"></div>}
                 {location === "AuthScreen" && <AuthScreen globalChangeScreen={changeScreen} />}
                 {location === "App" && <Lockers />}
             </div>
