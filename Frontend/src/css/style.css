@@ -62,6 +62,7 @@ header {
     padding: 20px;
     border-radius: 30px;
     filter: drop-shadow(0px 0px 15px rgba(195, 195, 195, 0.38));
+    transition: mask-image 0s, scale 0.3s, opacity 0.3s;
 }
 
 .window-geometry {
@@ -162,14 +163,14 @@ input:focus {
     width: 50px;
     aspect-ratio: 1;
     border-radius: 50%;
-    background: #f03355;
+    background: #f17d92;
     clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
     animation: l1 2s infinite cubic-bezier(0.3,1,0,1);
     transition-duration: 0.3s;
 }
 @keyframes l1 {
-    33% {border-radius: 0;background: #514b82 ;clip-path: polygon(0 0,100% 0,100% 100%,0 100%)}
-    66% {border-radius: 0;background: #ffa516 ;clip-path: polygon(50% 0,50% 0,100% 100%,0 100%)}
+    33% {border-radius: 0;background: #b8b0ff;clip-path: polygon(0 0,100% 0,100% 100%,0 100%)}
+    66% {border-radius: 0;background: #ffd189;clip-path: polygon(50% 0,50% 0,100% 100%,0 100%)}
 }
 .locker-button-wrapper {
     width: 140px;
