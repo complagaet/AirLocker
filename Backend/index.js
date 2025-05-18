@@ -10,7 +10,7 @@ const app = express();
 
 mongoose.connect(`${DB_URL}`).then(() => console.log(`Connected to MongoDB`));
 
-app.use(express.static('public'));
+app.use(express.static('static'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

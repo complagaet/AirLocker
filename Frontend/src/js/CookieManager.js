@@ -7,7 +7,7 @@ export const getCookie = () => {
 };
 
 export const setCookie = (value) => {
-    Cookies.set(cookieName, value, { path: "/", expires: 1 / 24 }); // 1 час = 1/24 дня
+    Cookies.set(cookieName, value, { path: "/", expires: 15 }); // 1 час = 1/24 дня
 };
 
 export const removeCookie = () => {

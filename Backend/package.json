@@ -1,9 +1,10 @@
 {
-  "name": "airlockerbackend",
+  "name": "@airlocker/backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js",
+    "dev": "nodemon index.js",
+    "build": "echo [Backend] Nothing to build...",
     "start": "node index.js"
   },
   "author": "complagaet",

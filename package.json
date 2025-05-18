@@ -1,0 +1,21 @@
+{
+  "name": "airlocker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/complagaet/AirLocker.git",
+  "author": "Pavel Lukoyanov",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "./Frontend",
+    "./Backend"
+  ],
+  "scripts": {
+    "dev": "rm -rf Backend/static && concurrently \"yarn workspace @airlocker/frontend dev\" \"yarn workspace @airlocker/backend dev\"",
+    "build": "yarn workspace @airlocker/frontend build && yarn workspace @airlocker/backend build && rm -rf Backend/static && cp -r Frontend/dist Backend/static",
+    "start": "yarn workspace @airlocker/backend start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

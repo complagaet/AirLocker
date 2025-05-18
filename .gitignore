@@ -9,7 +9,7 @@ Thumbs.db
 *.orig
 
 # Ignore environment files
-.env
+Backend/.env
 .env.local
 .env.*.local
 *.env
@@ -118,3 +118,4 @@ Desktop.ini
 # tools/output/
 
 settings.json
+static
