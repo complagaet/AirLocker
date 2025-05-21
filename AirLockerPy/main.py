@@ -1,6 +1,7 @@
 import time
 
 import requests
+from serial.serialutil import SerialException
 
 import script.content as cont
 from script.tools import *
@@ -294,9 +295,17 @@ while running:
                 screens.alert(
                     IMG['Locked'] if response.json()["isLocked"] else IMG['Unlocked'],
                     f"{response.json()["lockerName"]}",
-                    f"{response.json()["isLocked"]}",
+                    f"{"Locked" if response.json()["isLocked"] else "Unlocked"}",
                     "BGFocus"
                 )
+
+                try:
+                    real_port = serial.Serial(CONFIG.get_settings()["port"], 9600)
+                    real_port.write(b"h\n") if response.json()["isLocked"] else real_port.write(b"z\n")
+                    NOTIFICATIONS = []
+                except SerialException:
+                    LOCATION = "PORT_SELECTION"
+                    NOTIFICATIONS.append((IMG["Reset"], "Invalid Port!"))
 
             else:
                 print(f'Ошибка: {response.status_code}')

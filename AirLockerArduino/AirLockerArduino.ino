@@ -9,7 +9,7 @@ Servo servo;
 
 void setup() {
   pinMode(LED_PIN, OUTPUT); // Инициализация светодиода
-  Serial.begin(115200); // Инициализация Serial - порта
+  Serial.begin(9600); // Инициализация Serial - порта
   servo.attach(SERVO_PIN);
 }
 
